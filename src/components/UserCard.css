@@ -1,0 +1,58 @@
+.user-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    .user-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .user-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  
+    .post-count {
+      font-size: 14px;
+      color: #666;
+    }
+  
+    @media (max-width: 768px) {
+      .user-card {
+        padding: 10px;
+        margin: 8px;
+      }
+  
+      .user-name {
+        font-size: 16px;
+      }
+  
+      .post-count {
+        font-size: 12px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .user-card {
+        padding: 8px;
+        margin: 6px;
+      }
+  
+      .user-name {
+        font-size: 14px;
+      }
+  
+      .post-count {
+        font-size: 10px;
+      }
+    }
+  }
+  
