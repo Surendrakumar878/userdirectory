@@ -26,14 +26,14 @@ console.log(selectedTimezone)
       // axios.get(`http://worldtimeapi.org/api/timezone/${timezone}`).then((response) => {
       //   setTime(new Date(response.data.utc_datetime));
       // });
-      // if (!isPaused&&selectedTimezone) {
-      //   axios.get(`http://worldtimeapi.org/api/timezone/${selectedTimezone}`).then((response) => {
-      //     console.log(response.data)
-      //     setTime(new Date(response.data.datetime));
-      //   }).catch((e)=>{
-      //     console.log(e)
-      //   })
-      // }
+      if (!isPaused&&selectedTimezone) {
+        axios.get(`http://worldtimeapi.org/api/timezone/${selectedTimezone}`).then((response) => {
+          console.log(response.data)
+          setTime(new Date(response.data.datetime));
+        }).catch((e)=>{
+          console.log(e)
+        })
+      }
      
     }, 1000);
 
@@ -45,7 +45,7 @@ console.log(selectedTimezone)
     let aa=new Intl.DateTimeFormat('en-GB', {
     
       timeStyle: 'medium',
-      // timeZone:  selectedTimezone && `${selectedTimezone}`,
+      timeZone:  selectedTimezone && `${selectedTimezone}`,
     }).format(date)
     return  aa
 

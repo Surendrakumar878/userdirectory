@@ -29,7 +29,7 @@ const UserProfile = ({ users,posts, onBackClick }) => {
       
       </div>
 
-      <UserDetails  userdeatail={[...userdeatail]}/>
+      {/* <UserDetails  userdeatail={[...userdeatail]}/> */}
       {/* Rest of the user details */}
       {/* Back button */}
       {/* Post section */}
