@@ -32,6 +32,7 @@ const App = () => {
     <Routes>
      
         <Route path="/"  element={ <div className="people-directory" style={{width:"90%",margin:"auto"}} >
+          <div style={{fontSize:"20px",fontWeight:600,textAlign:"center"}} > Directory</div>
             {users?.map((user) => (
               <UserCard key={user.id} posts={[...posts]}  user={user}  />
             ))}

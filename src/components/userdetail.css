@@ -1,0 +1,38 @@
+.user-details{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.user-details>div{
+margin-left: 20px;
+text-align: letf;
+}
+.user-contact-info{
+    display: flex;
+}
+.phone{
+    margin-left: 10px;
+}
+.username-info{
+    display: flex;
+}
+.catch-phrase{
+    margin-left: 10px;
+}
+@media (max-width: 800px) {
+    .user-details {
+      flex-direction: column;
+    }
+    .user-address{
+font-size: 10px;
+    }
+    .user-contact-info{
+        font-size: 10px;  
+    }
+    .user-info{
+        font-size: 10px; 
+    }
+  }

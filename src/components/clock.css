@@ -1,0 +1,13 @@
+.clock{
+    display: flex;
+  }
+  .clock>div{
+    margin-left: 20px;
+  }
+  @media (max-width: 800px) {
+    .clock {
+      flex-direction: column;
+    }
+  }
+  
+  

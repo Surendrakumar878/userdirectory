@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import './clock.css'
 const Clock = ({ timezone="America/Indiana/Winamac" }) => {
   const [time, setTime] = useState(new Date());
   const [isPaused, setPaused] = useState(false);
@@ -62,6 +62,9 @@ console.log(selectedTimezone)
   console.log(time)
   return (
     <div className="clock">
+      <div>
+
+    
        <label htmlFor="timezone">Select Timezone: </label>
       <select id="timezone" value={selectedTimezone} onChange={handleTimeZoneChange}>
         {timezones?.map((timezone) => (
@@ -70,8 +73,12 @@ console.log(selectedTimezone)
           </option>
         ))}
       </select>
+      </div>
       <div className="time">{formatTime(time,selectedTimezone)}</div>
+      <div >
+
       <button onClick={handlePauseToggle}>{isPaused ? 'Start' : 'Pause'}</button>
+      </div>
     </div>
   );
 };
