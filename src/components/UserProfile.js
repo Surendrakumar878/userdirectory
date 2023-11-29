@@ -3,7 +3,7 @@ import "./UserProfile.css"
 import Clock from './Clock';
 
 import UserDetails from './UserDetails';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 const UserProfile = ({ users,posts, onBackClick }) => {
   const {userId}=useParams()
   console.log(users,userId)
@@ -20,16 +20,16 @@ const UserProfile = ({ users,posts, onBackClick }) => {
   return (
     <div className="user-profile">
 
-      {/* Clock and user details */}
-
-      {/* <TimeZoneSelector/> */}
+    
       <div className="clock-section">
-        {/* Clock component */}
+        <Link to="/" >
+    <button> Back </button>
+        </Link>
         <Clock/>
       
       </div>
 
-      <UserDetails  userdeatail={[...userdeatail]}/>
+      {/* <UserDetails  userdeatail={[...userdeatail]}/> */}
       {/* Rest of the user details */}
       {/* Back button */}
       {/* Post section */}
